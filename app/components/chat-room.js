@@ -5,11 +5,20 @@ export default Ember.Component.extend({
 
     setup: function() {
            this.get('sockjs').on('messageReceived',this, 'messageReceived');
-//            this.get('sockjs');
     }.on('init'),
 
     messageReceived: function(message){
+        $('#chat-content').val(function(i, text){
+            return text + message+ '\n';
+        });
         this.set('message',message);
+    },
+    actions: {
+        enter: function(info,username) {
+            var send = this.get('sockjs');
+            send.sendInfo(username + ': ' + info);
+            
+        }
     }
 
 });
