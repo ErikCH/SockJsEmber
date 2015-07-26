@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     }.on('init'),
 
     messageReceived: function(message){
-        $('#chat-content').val(function(i, text){
+        this.$('#chat-content').val(function(i, text){
             return text + message+ '\n';
         });
         this.set('message',message);
