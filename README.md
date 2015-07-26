@@ -1,7 +1,6 @@
 # Service-sock-js
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This program is used with a tutorial written at [www.programwitherik.com](http://www.programwitherik.com/ember-services-tutorial). In this application we take an Ember.js application and have it talk to a Node application that is running SockJS. We use a service to do this. 
 
 ## Prerequisites
 
